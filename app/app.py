@@ -6,7 +6,10 @@ app = Flask(__name__)
 def hello_world():
     return render_template("home.html")
 
+@app.route("/blog")
+def blog():
+    return "<p>I love you, Lolo! Page 2</p>"
 
-@app.route("/page2")
-def hello_world2():
+@app.route("/wedding")
+def wedding():
     return "<p>I love you, Lolo! Page 2</p>"
