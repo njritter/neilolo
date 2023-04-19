@@ -8,6 +8,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/reception")
+def reception():
+    return render_template("reception.html")
+
+
 @app.route("/schedule")
 def schedule():
     return render_template("schedule.html")
