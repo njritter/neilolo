@@ -8,11 +8,11 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/schedule")
+def schedule():
+    return render_template("schedule.html")
+
+
 @app.route("/blog")
 def blog():
-    return "<p>I love you, Lolo! Page 2</p>"
-
-
-@app.route("/wedding")
-def wedding():
-    return render_template("wedding.html")
+    return render_template("blog.html")
