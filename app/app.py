@@ -1,6 +1,16 @@
 from flask import Flask, render_template
+from forms import LoginForm
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'you-will-never-guess'
+
+user = {"username": "Neilolo"}
+
+
+@app.route("/login")
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
 
 
 @app.route("/")
@@ -26,3 +36,7 @@ def photos():
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
